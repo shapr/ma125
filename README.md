@@ -1,4 +1,4 @@
-ma125
+MA125
 =====
 
-Calculus 1 at una.edu
+Calculus 1 at http://una.edu/ for Sprint 2013
