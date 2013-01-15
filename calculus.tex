@@ -1,0 +1,109 @@
+% -*- fill-column: 110 -*-
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\begin{document}
+\section*{Calculus}
+\section{Review}
+\subsection{Factoring}
+First we review basic factoring.
+
+\begin{math}
+a^2-b^2 = (a+b)(a-b)\\
+a^3-b^3 = (a-b)(a^2+ab+b^2)\\
+a^3+b^3 = (a+b)(a^2-ab+b^2)\\
+a^2+2ab+b^2 = (a+b)^2\\
+a^2-2ab+b^2 = (a-b)^2
+\end{math}
+
+\subsection{Radicals}
+
+$\sqrt[n]{x} = x^{\frac{1}{n}}$
+
+So what would be the result of $ \sqrt[n]{\frac{x}{y}} $ ?
+\section{2013-01-14 Mon limit of a function and limit laws}
+start with 2.2 and will pick up 2.1 later
+
+consider $f(x) = \frac{x^3-x^2}{2x-2}$ near c = 1
+
+we want to know the behavior of function f near c
+
+\begin{flalign}
+x &= f(x)\\
+0.9 &= 0.405\\
+0.99 &= 0.49005\\
+0.9999 &= 0.499900005\\
+1.0001 &= 0.500100005\\
+1.01 &= 0.51005\\
+1.1 &= 0.605\\
+\end{flalign}
+it appears that $f(x) = \frac{x^3-x^2}{2x-2}$ near c = 1 gets closer
+to 0.5 as x gets closer to 1.
+
+Notice that $f(x) = \frac{x^3-x^2}{2x-2} = \frac{x^2(x-1)}{2(x-1)} =
+\frac{x^2}{2}$ if x is $\neq$ to 1
+and f(x) is undefined if x = 1
+
+(insert parabola graph of this equation)
+
+we can see from the graph that as x gets closer to 1, f(x) gets closer
+to $\frac{1}{2}$.
+
+We say that the limit of the function $\frac{x^3-x^2}{2x-2}$ as
+x approaches 1 is equal to $\frac{1}{2}$.
+
+$\lim_{x \to 1} \frac{x^3-x^2}{2x-2} = \frac{1}{2}$ (how do I get the
+lim stuff COMPLETELY under the lim word?)
+
+\subsection{Informal definition of a limit}
+suppose f(x) is defined on an open interval about c, except possibly
+at c itself. If f(x) is arbitrarily close to L (as close to L as we
+like) for all x sufficiently close to c, we say that f approaches the
+limit L as x approaches c, and write $\lim_{x \to c}, f(x) = L $
+
+NOTE it is important to note that $\lim_{x \to c} f(x)$
+DOES NOT depend on the value of f at c.
+Instead what matters is the value of f NEAR c.
+
+Now we graph a function f 
+
+funny triangle I don't quite understand
+at zero it's 7, at 2 it's 3 at 3.5 it's roughly zero
+$\lim_{x \to 2} f(x) = 3$
+
+now we put a hole at x = 2, showing that x is not defined there.
+so we got closer and closer to 3, but never quite reach it.
+
+We draw the graph again, but we add a point 2,6 such that the y value AT 2 is definitely 6. Still doesn't
+change the result of the limit because what matters is NEAR c, not AT c.
+
+Another graph, 
+$f(x) = \left\{ \begin{array}{l}
+1, x < 0\\
+2, x \geq 0 \end{array} \right. $
+What's the limit of f(x) as it approaches 0? The limit does not exist!
+
+but what about $f(x) = \frac{1}{x^2}$ and we want $\lim_{x \to 0} f(x)$.
+We have roughly a solar chimney graph, where y asymptotically approaches 0
+
+Is there a single finite number that our y-value is approaching as our x gets closer to zero? NO!
+because this increases without bound
+
+next graph is: $f(x) = \left\{\begin{array}{l}
+0,x \leq 0\\
+sin \frac{1}{x}, x > 0
+\end{array} \right. $
+limit does not exist because the value is oscillating
+
+\subsection{Limit Laws}
+If L,M, c and k are real numbers and 
+$\lim_{x \to c} f(x) = L$ and $\lim_{x \to c} g(x) = M$, then 
+$\lim_{x \to c}(f(x) + g(x)) = L+M$
+that is, the sum of the limits is the limit of the sums?
+$\lim_{x \to c}(f(x) - g(x)) = L-M$
+that requires the difference to be the same
+$\lim_{x \to c}( k \times f(x)) = k \times L$
+
+\end{document}
+% LocalWords: LocalWords
