@@ -3,9 +3,11 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \begin{document}
 \section*{Calculus}
 \section{Review}
+
 \subsection{Factoring}
 First we review basic factoring.
 
@@ -22,6 +24,10 @@ a^2-2ab+b^2 = (a-b)^2
 $\sqrt[n]{x} = x^{\frac{1}{n}}$
 
 So what would be the result of $ \sqrt[n]{\frac{x}{y}} $ ?
+
+more radicals
+
+$x^{-\frac{1}{n}} = \dfrac{1}{x^{\frac{1}{n}}} = \dfrac{1}{\sqrt[n]{x}}$
 \section{2013-01-14 Mon limit of a function and limit laws}
 start with 2.2 and will pick up 2.1 later
 
@@ -199,12 +205,100 @@ $3(-3) = -9$
 
 \subsection{Squeeze Theorem}
 
-Suppose that $g(x) \leq f(x) \leq h(x) \forall x$ in some open interval containing c, except possibly at $x=c$
+Suppose that $g(x) \leq f(x) \leq h(x) \forall x$ in some open interval\footnote{an open interval necessarily
+  means that one or more end points are open (not included), that is would be an open circle in a number line} containing c, except possibly at $x=c$
 itself.
 
 $\lim{_{x \to c}}g(x) = \lim{_{x \to c}}h(x) = L$. Then  $\lim_{x \to c}f(x) = L$.
 This is true because f is squeezed between h and g.
+$\frac{1}{2}$
 
+\section{2013-01-16 2.2 continued, squeeze theorem}
+
+if $0 \leq f(x) \leq c$ for some real number c, then prove
+function f is bounded between the number 0 and c
+we want to prove that $\lim_{x \to 0} x^2f(x) = 0$
+
+(to use the squeeze theorem, we need the limits of the two outer functions)
+
+Proof
+suppose that  $0 \leq f(x) \leq c$ for some real number c then
+$0 \leq x^2f(x) \leq cx^2$ Also $\lim_{x \to 0}0 = 0$ and $\lim_{x \to 0}cx^2 = 0$. Thus by the squeeze
+theorem, $\lim_{x \to 0}x^2f(x) = 0$.
+
+Prove that $\lim_{x \to 0}x^4 \cos \frac{1}{x} = 0$.
+
+We'll want to get to $\leq x^4\cos \frac{1}{x} \leq$, that is, we need the limits of the two outer functions.
+
+We know that $-1 \leq \cos t \leq 1$ and $-1 \leq \cos \frac{1}{x} \leq 1 \forall x \neq 0$
+
+We distribute $x^4$ so we get $-x^4 \leq x^4 \cos \frac{1}{x} \leq x^4$
+
+\begin{proof}
+Since $-1 \leq \cos t \leq 1$ for every real number t then $-1 \leq \cos \frac{1}{x} \leq 1$ for every $x \neq
+0$. Thus $-x^4 \leq x^4 \cos \frac{1}{x} \forall x \neq 0$. Also $\lim_{x \to 0} -x^4 = 0$ and $\lim_{x \to 0}
+x^4 = 0$. Hence, by the Squeeze Theorem, $\lim_{x \to 0} x^4 \cos \frac{1}{x} = 0.$
+\end{proof}
+Would be the same for $\sin$ instead of $\cos$, but would not be bounded for every x out there?
+
+find
+
+This should help you out with some of the homework.
+$\lim_{x \to \frac{\pi}{2}} \sin x = sin \frac{\pi}{2} = 1$
+
+\subsection{2.3 The precise definition of a limit}
+If we can make f(x) arbitrarily close to L as long as we can make f(x) close to c. What?
+
+Now we get a more formal definition of close enough.
+
+We have agreed that $\lim_{x \to c}f(x) = L$ if we can cause f(x) to be arbitrarily close to L (as close as we
+like) by taking x sufficiently close (enough) to c.
+So there is a positive number $\delta$ such that x is in $(c-\delta, c+\delta)$
+$c- \delta < x < c + \delta$
+$-\delta < x -c < \delta$
+$|x - c| < \delta$ 
+
+The above means x is close to c.
+
+
+Let's say that f(x) is close to L if f(x) lies within an open interval centered at L. So there is a positive
+number $\epsilon$ such that f(x) is in $(L-\epsilon{},L+\epsilon{})$
+$
+L-\epsilon < f(x) < L + \epsilon
+$
+$-\epsilon < (x) -L < \epsilon$
+$|f(x)-L| < \epsilon$
+
+The above means f(x) is close to L.
+
+We will now use these together.
+
+\subsection{Formal Definition of a Limit}
+Let f be a function defined on some open interval\footnote{a closed interval means that the range of the
+  function is \underline{continuous} over the real numbers.} containing c, except possibly at c itself.
+
+Then the$\lim_{x \to c} f(x) = L$ if for every $\epsilon > 0 \exists \delta > 0$ such that if $0 < |x-c| <
+\delta{}$\footnote{This is where x is sufficiently close to c, note that x cannot equal c, thus we have the
+  greater than zero constraint} then we will have our $|f(x)-L| < \epsilon $\footnote{f(x) is arbitrarily close to L}.
+
+Epsilon is how far away from the limit you are, delta is how far away from the ...
+
+
+$\lim_{x \to c}f(x) = L$ we have a sine graph of f, where we examine the maximum vertical interval we can have
+that will satisfy $(c- \delta,c + \delta)$ 
+
+Prove $\lim_{x \to 3}(2x +4) = 10$
+
+\begin{proof}
+Given $\epsilon > 0$. We seek a $\delta > 0$ such that if $0 < |x-c| < \delta$ then $|f(x)-L|< \epsilon$.
+
+we substitute 3 for c and 10 for L. (why?)
+
+if $0 < |x-3| < \delta$ then $|(2x-4)-10|< \epsilon$ 
+if $0 < |x-3| < \delta = ?$ then $|(2x+4)-10| = |2x-6| = |2(x-3)| = 2|x-3| $
+we know that $ 2|x-3| < 2 \delta = 2(?) = 2(\frac{\epsilon}{2} = \epsilon)$ what?
+\end{proof}
 \section{Outstanding Questions?}
+
 \end{document}
 % LocalWords: LocalWords
