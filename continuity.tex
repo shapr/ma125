@@ -1,0 +1,51 @@
+% -*- fill-column: 110 -*-
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\footnotesize 2.5 Continuity Homework}
+\rhead{\footnotesize January 29 2013 -- MA125 -- Shae Erisson}
+
+\begin{document}
+\section*{2.5 Continuity Homework}
+
+Prove that the function $f(x) = x^3 - 4x +1$ has at least one zero in
+the interval $[1,2]$
+
+\begin{proof}
+Let $f(x) = x^3 - 4x +1$. Since $f$ is a polynomial function, then it is
+continuous for all real numbers. Thus $f$ is continuous on $[1,2]$.
+Also, $f(1) = -2$ and $f(2) = 1$. So $f(1) < 0 < f(2)$. Hence by the intermediate value
+theorem, $f(c) = 0$ for some $c$ in $[1,2]$.
+\end{proof}
+
+Prove that the equation $\sin x - x = -2$ has at least one solution.
+
+\begin{proof}
+Let $f(x) = \sin x - x + 2$. Since $f$ is a polynomial function, then it
+is continuous for all real numbers. Thus $f$ is continuous on $[2,3]$.
+Also $f(2) = 0.9$ and $f(3) = -0.8$. So $f(2) < 0 < f(3)$. Hence by
+the intermediate value theorem, $f(c) = 0$ for some $c$ in $[2,3]$.
+\end{proof}
+
+Prove that the equation $\sqrt{x+5}=\dfrac{1}{x+3}$ has at least one
+solution.
+
+\begin{proof}
+Let $f(x) = \sqrt{x+5} - \dfrac{1}{x+3}$. Since $f$ is a polynomial function, then it
+is continuous for all real numbers. Thus $f$ is continuous on $[-1,1]$.
+Through empirical exploration, no input values were found that
+produced negative numbers, thus no proof was found that this function
+has at least one solution. Thus its is proven that I need to show up at
+your office hours.
+\end{proof}
+
+\end{document}
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
