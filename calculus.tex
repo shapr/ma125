@@ -4,6 +4,8 @@
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{amsthm}
+
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
 \begin{document}
 \section*{Calculus}
 \section{Review}
@@ -608,6 +610,103 @@ $
 
 If we graph this, as x gets larger, it approaches 0, as it gets smaller, it also approaches 0.
 
+\section{2013 01 28 limits at infinity of rational functions}
+
+Divide the numerator and denominator by the highest power of x in the denominator.
+
+Ex: $\lim_{x \to \infty}\dfrac{2x^2-x-3}{3x^2-2}$
+divide both top and bottom by highest power x in the denominator, in this case $x^2$.
+
+If we divide this polynom by $x^2$ that's just like dividing each separate term by $x^2$
+
+$\dfrac{\frac{2x^2}{x^2}- \frac{x}{x^2} -\frac{3}{x^2}}{\frac{3x^2}{x^2} - \frac{2}{x^2}} = \dfrac{2-\frac{1}{x}-\frac{3}{x^2}}{3-\frac{2}{x^2}} = \dfrac{2-0-0}{3-0} = \dfrac{2}{3}$
+
+ex:
+
+find $\lim_{x\to-\infty}\dfrac{5x-1}{\sqrt{3+16x^2}} =
+\lim_{x\to-\infty}\dfrac{\frac{5x-1}{\sqrt{x^2}}}{\frac{\sqrt{3+16x^2}}{\sqrt{x^2}}}$ 
+$=  \lim_{x\to-\infty}\dfrac{\frac{5x-1}{|x|}} {\frac{\sqrt{3+16x^2}}{\sqrt{x^2}}}$
+
+$\dfrac{-5+\frac{1}{x}}{\sqrt{\frac{3}{x^2}+16}}$
+
+$\dfrac{-5+0}{\sqrt{0+16}} = \dfrac{-5}{4}$
+
+definition:
+
+the line y = b is a horizontal asymptote of the graph of a function y=f(x) if either $\lim_{x\to\infty}f(x)=b$
+or $\lim_{x\to -\infty}f(x)=b$ .
+
+An asymptote approaches but never reaches a number.
+
+Ex: find the horizontal asymptotes of $y=\dfrac{x^3-2}{|x|^3+1}$.
+$\lim_{x\to -\infty}\dfrac{x^3-2}{|x|^3+1}$
+abs x becomes negative x because we are approaching negative infinity.
+$\lim_{x\to -\infty}\dfrac{x^3-2}{(-x)^3+1}$
+we lose the parens for some reason.
+$\lim_{x\to -\infty}\dfrac{x^3-2}{-x^3+1}$
+
+now we use what we just learned, and divide everything by $x^3$
+$\lim_{x\to -\infty}\dfrac{\frac{x^3}{x^3}-\frac{2}{x^3}}{\frac{-x^3}{x^3}\frac{1}{x^3}}$
+$\dfrac{1-\frac{2}{x^3}}{-1+\frac{1}{x^3}}$
+and that simplifies to
+$\dfrac{1-0}{-1+0} = -1$
+
+now we examine positive infinity.
+
+$\lim_{x\to -\infty}\dfrac{x^3-2}{|x|^3+1}$
+lots of the same steps as above, but we end up with positive one
+$\dfrac{1-0}{1+0} = 1$
+
+\subsection{Infinite Limits}
+The notation $\lim_{x\to c}f(x)=\infty$ means that the values of $f(x)$ can be made arbitrarily large by taking
+$x$ sufficiently close to $c$.
+
+ex: find $\lim_{x\to 0^+}\dfrac{1}{x} = \infty$
+
+$\lim_{x\to 0^-}\dfrac{1}{x}$ becomes $\dfrac{1}{-\frac{1}{10}},\dfrac{1}{-\frac{1}{1000}}$ this becomes
+$-\infty$
+
+So, what about $\lim_{x\to 0}\dfrac{1}{x}$ ?
+
+Does not exist because it's not the same from the left and the right.
+
+Ex: find $\lim_{x\to 6}\dfrac{-2x}{x-6}$ numerator approaches -12, denominator approaches 0.\footnote{When you
+  find a zero in the denominator, break it up and check the left and right hand limits.}
+
+$\lim_{x\to 6^-}\dfrac{-2x}{x-6} = \infty$
+$\lim_{x\to 6^+}\dfrac{-2x}{x-6} = -\infty$
+
+Since they're not the same, the limit does not exist.
+
+
+ex: find $\lim_{x \to -5}\dfrac{x+8}{(5+x)^4}$ num goes to 3, denom goes to 0
+
+$\lim_{x \to -5^-}\dfrac{x+8}{(5+x)^4} = \infty$
+
+from the right
+
+5+x approaches through the positives, so is also positive infinity
+$\lim_{x \to -5^+}\dfrac{x+8}{(5+x)^4} = \infty$
+
+thus the limit is $\infty$
+because the denominator has an even power, it will always be positive.
+
+$\lim_{x\to\infty}x^3-x^2$
+
+Can't say infinity minus infinity equals zero, it's not a number.
+
+$\lim_{x\to\infty}x^2(x-1)$ since both equal infinity, we can say this whole thing becomes infinity. 
+
+Purpose of this example is to give you a WARNING. $\infty - \infty \neq 0$
+
+ex: find $\lim_{x\to - \infty}\dfrac{3x^3-x}{2x^2-1}$
+
+divide by $x^2$
+$\lim_{x\to - \infty}\dfrac{\frac{3x^3}{x^2}-\frac{x}{x^2}}{\frac{2x^2}{x^2}-\frac{1}{x^2}}$
+
+3x goes to $3x \to -\infty$ and $\dfrac{1}{x} \to 0$
+
+
 \section{Outstanding Questions?}
 
 Is there some way to automatically insert or display the graph of an array such as $f(x) = \left\{\begin{array}{l}
@@ -632,7 +731,18 @@ Switch to amsart document class?
 $\lim_{x\to\infty}\dfrac{1}{x}$
 
  $\max_{0\le x\le 1}x(1-x)=1/4$
+
+
+\begin{align*}
+\biggl(\int_{-\infty}^\infty e^{-x^2}\diff x\biggr)^2 
+  &= \int_{-\infty}^\infty\int_{-\infty}^\infty e^{-(x^2+y^2)}\diff x\diff y \\
+  &= \int_0^{2\pi}\int_0^\infty e^{-r^2}r\diff r\diff\theta                  \\
+  &= \int_0^{2\pi}\biggl(-{e^{-r^2}\over2}\bigg\vert_{r=0}^{r=\infty}\,\biggr)\diff\theta\\
+  &= \pi                                          \tag*{q.e.d.}
+\end{align*}
+
 \end{document}
+
 
 
 % LocalWords: LocalWords
