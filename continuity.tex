@@ -2,13 +2,13 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
-\usepackage{amsmath}
-\usepackage{amsthm}
+\usepackage{amsmath} % math
+\usepackage{amsthm} % theorem
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \lhead{\footnotesize 2.5 Continuity Homework}
-\rhead{\footnotesize January 29 2013 -- MA125 -- Shae Erisson}
+\rhead{\footnotesize January 31 2013 -- MA125 -- Shae Erisson}
 
 \begin{document}
 \section*{2.5 Continuity Homework}
@@ -26,22 +26,24 @@ theorem, $f(c) = 0$ for some $c$ in $[1,2]$.
 Prove that the equation $\sin x - x = -2$ has at least one solution.
 
 \begin{proof}
-Let $f(x) = \sin x - x + 2$. Since $f$ is a polynomial function, then it
-is continuous for all real numbers. Thus $f$ is continuous on $[2,3]$.
-Also $f(2) = 0.9$ and $f(3) = -0.8$. So $f(2) < 0 < f(3)$. Hence by
-the intermediate value theorem, $f(c) = 0$ for some $c$ in $[2,3]$.
+  Let $f(x) = \sin x - x + 2$. Since $\sin$ is continuous on the real numbers, then this entire function is
+  continuous for all real numbers. Thus $f$ is continuous on the closed interval $[2,3]$.  Also $f(2) = 0.9$
+  and $f(3) = -0.8$ were discovered through empirical analysis. So $f(2) < 0 < f(3)$. Hence by the
+  intermediate value theorem, $f(c) = 0$ for some $c$ in $[2,3]$.
 \end{proof}
 
-Prove that the equation $\sqrt{x+5}=\dfrac{1}{x+3}$ has at least one
-solution.
+Prove that the equation $\sqrt{x+5}=\dfrac{1}{x+3}$ has at least one solution.
 
 \begin{proof}
-Let $f(x) = \sqrt{x+5} - \dfrac{1}{x+3}$. Since $f$ is a polynomial function, then it
-is continuous for all real numbers. Thus $f$ is continuous on $[-1,1]$.
-Through empirical exploration, no input values were found that
-produced negative numbers, thus no proof was found that this function
-has at least one solution. Thus its is proven that I need to show up at
-your office hours.
+Let $f(x) = \sqrt{x+5}$ and $g(x) = \dfrac{1}{x+3}$. The function $f$ is continuous as long as the value under
+the radical is greater than or equal to zero. Thus the smallest input that gives a real number output is $-5$,
+and the largest is $\infty$. Thus $f(x)$ is continuous over the interval $[-5,\infty)$.
+The function $g(x)$ is discontinuous only at the input of $-3$. Thus the function $g(x)$ is continuous in the
+interval $(-\infty,-3)\cup(-3,\infty)$. The intersection of these two functions $[-5,-3)\cap(-3,\infty)$
+describes the continuity for the entire function.
+
+Thus we can pick two numbers where the function is continuous, such as $-2$ and $-1$, and by the intermediate
+value theorem, there is an $f(c)$ for some $c$ in $[-2,-1]$.
 \end{proof}
 
 \end{document}
