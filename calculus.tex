@@ -4,6 +4,7 @@
 \usepackage{hyperref}
 \usepackage{amsmath}
 \usepackage{amsthm}
+\usepackage{color}
 %\usepackage{sagetex}
 
 \newcommand*\diff{\mathop{}\!\mathrm{d}}
@@ -17,6 +18,7 @@ Thursday 7:00-10:00PM
 Math Lab ?
 \section{Calculus}
 \section{Review}
+
 
 \subsection{Factoring}
 First we review basic factoring.
@@ -38,6 +40,97 @@ So what would be the result of $ \sqrt[n]{\frac{x}{y}} $ ?
 more radicals
 
 $x^{-\frac{1}{n}} = \dfrac{1}{x^{\frac{1}{n}}} = \dfrac{1}{\sqrt[n]{x}}$
+
+\subsection{Content From The Textbook}
+A function $f$ from a set $D$ to a set $Y$ is a rule that assigns a \textit{unique} (single) element $f(x)
+\in Y$ to each element $x \in D$.
+
+The set $D$ of all possible input values is called the \textbf{domain} of the function.
+
+The set of all values of $f(x)$ as $x$ varies throughout $D$ is called the \textbf{range} of the function.
+
+The range may not include every element in set $Y$. \textcolor{red}{So, $Y$ is the codomain, right?}
+
+When we define a function $y = f(x)$ with a formula and the domain is not state explicitly or restricted by
+context, the domain is assumed to be the largest set of real $x$-values for which the formula gives real
+$y$-values, the so-called \textbf{natural domain}.
+
+If the graph of a function climbs or rises as you move from left to right, we say that function is
+\textit{increasing}.
+
+If the graph of a function descends or falls as you move from left to right, the function is
+\textit{decreasing}.
+
+But the conditions above must be true for \textit{every} pair of points on the graph for this to be true.
+
+A function $y = f(x)$ is an
+
+\textbf{even function of x} if $f(-x) = f(x)$
+
+\textbf{odd function of x} if $f(-x) = -f(x)$
+
+If I remember correctly, $\cos$ is an odd function, and $\sin$ is an even function? Ok, wtf was I thinking?
+
+$\cos(-\theta) = cos(\theta)$ and $\sin(-\theta) = -\sin(\theta)$ !
+
+Thus $\cos$ is an even function of $x$, and $\sin$ is an odd function of $x$ ! \textcolor{red}{Are these true
+  for the entire domain? I think so?}
+
+Two variables $y$ and $x$ are \textbf{proportional} (to one another) if one is always a constant multiple of
+the other; that is, if $y = kx$ for some nonzero constant $k$.
+
+A function $f(x) = x^{a}$ where $a$ is a constant, is called a \textbf{power function}.
+
+Should probably put in more detail on power functions here.
+
+A function $p$ is a \textbf{polynomial} if $p(x) = a_{n}x^{n} + a_{n-1}x^{n-1} + ... + a_{1}x + a_{0}$ where
+$n$ is a non-negative integer and the numbers $a_{0}$,$a_{1}$,$a_{2}$...,$a_{n}$ are real constants (called
+the \textbf{coefficients} of the polynomial). All polynomials have domain $(-\infty,\infty)$. If the leading
+coefficient $a_{n} \neq 0$ and $n > 0$, then $n$ is called the \textbf{degree} of the polynomial. Linear
+functions with $m \neq 0$ are polynomials of degree 1. Polynomials of degree 2, usually written as $p(x) =
+ax^{2} + bx + c$, are called \textbf{quadratic functions}. Likewise, \textbf{cubic functions} are polynomials
+$p(x) = ax^{3} + bx^{2} + cx + d$ of degree 3.
+
+A \textbf{rational function} is a quotient or ration $f(x) = \dfrac{p(x)}{q(x)}$ where $p$ and $q$ are
+polynomials. The domain of a rational function is the set of all real $x$ for which $q(x) \neq 0$.
+
+Any function construct from polynomials using algebraic operations (addition, subtraction, multiplication,
+division and taking roots) lies within the class of \textbf{algebraic functions}. All rational functions are
+algebraic, but also included are more complicated functions (such as those satisfying an equation like $y^{3}
+- 9xy + x^{3} = 0$.
+
+Functions of the form $f(x) = a^{x}$, where the base $a > 0$ is a positive constant and $a \neq 1$, are called
+\textbf{exponential functions}. All exponential functions have domain $(-\infty,\infty)$ and range
+$(0,\infty)$, so an exponential function never produces the value 0.
+
+If $f$ and $g$ are functions, the \textbf{composite} function $f \circ g$ (f composed with g) is defined by
+$(f \circ g)(x) = f(g(x))$.
+
+\subsubsection{scaling}
+$y = f(x) + k$ shifts the graph $f up k$ units if $k > 0$, or $down |k|$ units if $k < 0$
+
+$y = f(x + h)$ shifts the graph of $f left h$ units if $h > 0$ or right if $h < 0$
+
+for $c > 1$ the graph is scaled:
+
+$y = cf(x)$ stretches $f$ vertically by a factor of $c$
+
+$y = \dfrac{1}{c}f(x)$ compresses $f$ vertically by a factor of $c$
+
+$y = f(cx)$ compresses $f$ horizontally by a factor of $c$
+
+$y = f(x/c)$ stretches $f$ horizontally by a factor of $c$
+
+for $c = -1$ the graph is reflected:
+
+$y = -f(x)$ reflects $f$ across the $x$-axis
+
+$y = f(-x)$ reflects $f$ across the $y$-axis
+
+\subsubsection{trig functions}
+
+$s = r\theta$
+
 \section{2013-01-14 Mon limit of a function and limit laws}
 start with 2.2 and will pick up 2.1 later
 
