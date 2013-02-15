@@ -1009,7 +1009,7 @@ is, continuous does not imply differentiable!
 The most obvious example is $f(x) = |x|$ which is continuous, but not differentiable. 
 \textcolor{red}{I don't quite understand why though } foo.
 \section{3.2 differentiation rules}
-$f'(x) = \lim_{h\to0^{+}}\dfrac{f(x+h)-f(x)}{h}$
+$ \left[ f'(x) = \lim_{h\to0^{+}}\dfrac{f(x+h)-f(x)}{h} \right] $
 
 Consider the derivative of a constant..
 If $f(x)=c$, where $c$ is a constant, then $f'(x) = \lim_{h\to0^{+}}\dfrac{f(x+h)-f(x)}{h} =
@@ -1075,6 +1075,14 @@ it can't work like addition and subtraction.
 
 The way it actually does work is $\dfrac{d}{dx} \left[f(x) \cdot g(x) \right] = f(x)\dfrac{d}{dx}\left[g(x) \right] + g(x)\dfrac{d}{dx}\left[f(x) \right]$
 
+
+\section{Higher Derivatives}
+
+For the equation $y=f(x)$, the first derivative is $f'(x)$, the second derivative is $f''(x)$, the third
+derivative is $f'''(x)$ but after that we switch to a different notation, namely $y^{(n)}$
+so the $6^{th}$ derivative is $y^{(6)}$.
+
+
 \section{Outstanding Questions?}
 
 Is there some way to automatically insert or display the graph of an array such as $f(x) = \left\{\begin{array}{l}
@@ -1109,6 +1117,16 @@ $\dfrac{\partial}{\partial x} x^{2}$
   &= \int_0^{2\pi}\biggl(-{e^{-r^2}\over2}\bigg\vert_{r=0}^{r=\infty}\,\biggr)\diff\theta\\
   &= \pi                                          \tag*{q.e.d.}
 \end{align*}
+
+\begin{equation}
+  \label{eq:1}
+\lim_{x\to\infty}\dfrac{1}{x}  
+\end{equation}
+\[ \lim_{x\to\infty}\dfrac{1}{x} \]
+
+$\equiv$
+
+$\not\Leftrightarrow$
 
 \end{document}
 
